@@ -39,9 +39,15 @@ def multiplication(a, b):
 def division(a, b):
   return f'<h1>{a} ÷ {b} = {a/b}</h1>'
 
+@app.route('/calculator/modulus/<int:a>/<int:b>')
+def modulus(a, b):
+  return f'<h1>{a} % {b} = {a%b}</h1>'
+
 @app.route('/calculator/power/<float:base>/<float:exponent>')
 def power(base, exponent):
   return f'<h1>{base}<sup>{exponent}</sup> = {base**exponent}</h1>'
+
+
 
 # subtraction
 # muliplication
